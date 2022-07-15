@@ -1,0 +1,83 @@
+body{
+    background-color:#81ebc8;
+}
+.container-redes{
+    
+    flex-wrap: wrap;
+    /* margin-bottom: 55px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    
+    position: relative;
+    margin: 20px;
+    flex-direction: row;
+}
+
+.container-redes img{
+    width: 50px;
+    height: 50px;
+    border: 1px solid #e5e5e5;
+    flex-wrap: wrap;
+    border-radius: 50%;
+
+}
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+    
+    
+
+}
+
+.wrapper :is(.btn, .link){
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 120px;
+    background-color: #81ebc8;
+    color: #151515;
+    border-radius: 50%;
+
+}
+
+.btn{
+    position: absolute;
+    border: none;
+    cursor: pointer;
+    transition: outline .25s;
+}
+
+.active .btn,
+.btn:hover{
+    outline: 2px solid #e5e5e5;
+    outline-offset: -4px;
+}
+
+.item{
+    position: absolute;
+    list-style: none;
+    transition: transform .5s;
+    transition-delay:  var(--d);
+}
+
+.wrapper.active .item:nth-child(1){
+    transform: translateX(-85px);
+}
+
+.wrapper.active .item:nth-child(2){
+    transform: translateY(-110px);
+
+}
+.wrapper.active .item:nth-child(3){
+    transform: translateX(-110px);
+}
+.wrapper.active .item:nth-child(4){
+    transform: translateY(-85px);
+
+}
